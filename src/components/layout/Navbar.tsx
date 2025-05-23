@@ -60,16 +60,16 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className={navbarClasses}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container px-4 py-4 mx-auto">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <Film className="text-indigo-500 h-8 w-8" />
-            <span className="font-bold text-2xl text-white">MovieHub</span>
+            <Film className="w-8 h-8 text-indigo-500" />
+            <span className="text-2xl font-bold text-white">Movie-Hub-24</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="items-center hidden space-x-8 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -90,33 +90,33 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 transition-colors hover:text-white"
               >
-                <Search className="h-6 w-6" />
+                <Search className="w-6 h-6" />
               </button>
               {isSearchOpen && (
                 <form
                   onSubmit={handleSearch}
-                  className="absolute right-0 top-full mt-2 w-64"
+                  className="absolute right-0 w-64 mt-2 top-full"
                 >
                   <input
                     type="search"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search movies & shows..."
-                    className="w-full px-4 py-2 rounded-lg bg-slate-800 text-white border border-slate-700 focus:outline-none focus:border-indigo-500"
+                    className="w-full px-4 py-2 text-white border rounded-lg bg-slate-800 border-slate-700 focus:outline-none focus:border-indigo-500"
                   />
                 </form>
               )}
             </div>
             <button
-              className="md:hidden text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 transition-colors md:hidden hover:text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
+                <X className="w-6 h-6" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="w-6 h-6" />
               )}
             </button>
           </div>
@@ -128,7 +128,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden pt-4 pb-2"
+            className="pt-4 pb-2 md:hidden"
           >
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
