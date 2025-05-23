@@ -349,7 +349,7 @@ export const movies: Movie[] = [
     genres: ["Horror"],
     category: "movie",
     isFeatured: true,
-    isNew: true,
+    isNew: false,
     isHD: true,
     watchUrl:
       "https://ww4.123moviesfree.net/movie/the-arkansas-pigman-massacre-1630859039/",
