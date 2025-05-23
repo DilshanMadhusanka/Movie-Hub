@@ -46,7 +46,7 @@ export default function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'Movies', path: '/movies' },
     { name: 'TV Shows', path: '/tv' },
-    { name: 'New & Popular', path: '/new' },
+    { name: <a href="https://www.profitableratecpm.com/w204eimrfz?key=c794cfad79e9546b9af7436b74c625a0">New & Popular</a> },
   ];
 
   const navbarClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
